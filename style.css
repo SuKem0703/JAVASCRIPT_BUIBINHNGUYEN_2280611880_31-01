@@ -1,0 +1,127 @@
+/* Cấu hình chung cho trang */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9; /* Màu nền nhẹ cho toàn trang */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Khu vực điều khiển (Input, Select) */
+.controls {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Đổ bóng nhẹ */
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Tự xuống dòng nếu màn hình nhỏ */
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+input[type="text"]:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Bảng dữ liệu */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+/* Header của bảng */
+thead tr {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* --- YÊU CẦU: ZEBRA STRIPING (1 dòng đen, 1 dòng trắng) --- */
+
+/* Dòng lẻ: Màu trắng, chữ đen */
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dòng chẵn: Màu đen, chữ trắng */
+tbody tr:nth-child(even) {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Hover: Khi di chuột vào dòng thì đổi màu để dễ nhìn */
+tbody tr:hover {
+    opacity: 0.9; /* Làm mờ nhẹ để tạo hiệu ứng */
+    cursor: pointer;
+}
+
+/* Hình ảnh sản phẩm */
+.product-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Quan trọng: Giúp ảnh không bị méo */
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    display: block;
+}
+
+/* Khu vực phân trang */
+.pagination {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#pageInfo {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Nút bấm chung */
+button {
+    cursor: pointer;
+    background-color: #007bff; /* Màu xanh chủ đạo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
